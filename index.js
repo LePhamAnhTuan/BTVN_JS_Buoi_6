@@ -45,20 +45,27 @@ function bai3() {
 }
 
 function bai4() {
-  for (i = 0; i <= 10; i++) {
-    document.getElementById(
-      "theDivBai4"
-    ).innerHTML = `<div class="bg-black bg-opacity-75 text-white p-3"></div> `;
-    console.log("i: ", i);
-    // if (i % 2 == 0) {
-    //   document.getElementById(
-    //     "theDivBai4"
-    //   ).innerHTML = `<div class="bg-black bg-opacity-75 text-white p-3"></div>`;
-    // } else {
-    //   document.getElementById(
-    //     "theDivBai4"
-    //   ).innerHTML = `<div class="bg-danger bg-opacity-75 text-white p-3"></div>`;
-    //   console.log("i: ", i);
-    // }
+  for (i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+      document.getElementById(
+        "theDivBai4"
+      ).innerHTML += `<div class="bg-danger bg-opacity-75 text-white p-3"></div>`;
+    } else {
+      document.getElementById(
+        "theDivBai4"
+      ).innerHTML += `<div class="bg-info bg-opacity-75 text-white p-3"></div>`;
+      console.log("i: ", i);
+    }
   }
+}
+
+function bai5() {
+  var soN = document.getElementById("inPut5").value * 1;
+  var ketQua = 0;
+  for (var i = 1; i <= soN; i++) {
+    ketQua += " " + i + " ";
+    console.log("i: ", i);
+    console.log("ketQua: ", ketQua);
+  }
+  document.getElementById("ketQua5").innerHTML = ketQua;
 }
